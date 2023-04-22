@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Query
-import com.androiddevs.mvvmnewsapp.Article
+import com.androiddevs.mvvmnewsapp.model.Article
 
 @Dao
-internal interface ArticleDao {
+interface ArticleDao {
     suspend fun upsert(article: Article):Long
 
     @Query("SELECT * FROM articles")
